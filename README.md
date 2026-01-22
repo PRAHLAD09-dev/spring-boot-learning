@@ -15,8 +15,18 @@ Covered:
 
 Status: Completed (Day 1)
 
+### (DAY 2)
+Covered:
+- Interface-based service architecture
+- Amazon Delivery business use case
+- Multiple delivery partners (strategy pattern)
+- Constructor-based Dependency Injection
+- Service layer separation (business logic)
+- Real-world order processing simulation
+
+Status: Completed (Day 2)
+
 ## Modules Planned
-- Spring Boot fundamentals
 - MVC architecture
 - RESTful APIs
 - Spring Data JPA
