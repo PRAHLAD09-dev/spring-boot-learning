@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>User Profile</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f8fb;
+        text-align: center;
+        padding-top: 80px;
+    }
+    .card {
+        background: white;
+        width: 420px;
+        margin: auto;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        color: #28a745;
+    }
+    a {
+        display: block;
+        margin-top: 12px;
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+    a:hover {
+        color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <h2>User Profile</h2>
+    <p>Name: <b th:text="${name}">User</b></p>
+
+    <a href="/home/welcome">Back to Home</a>
+    <a href="/admin/dashboard">Go to Dashboard</a>
+</div>
+
+</body>
+</html>

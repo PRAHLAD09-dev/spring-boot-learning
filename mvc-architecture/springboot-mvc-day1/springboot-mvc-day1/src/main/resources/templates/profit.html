@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Profit Page</title>
+
+<style>
+body {
+  background: #f4f6f8;
+  font-family: Arial;
+}
+
+.card {
+  background: white;
+  width: 320px;
+  margin: 100px auto;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+h1 {
+  color: #ff9800;
+}
+
+a {
+  display: block;
+  margin-top: 12px;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h1>Company Profit</h1>
+  <h2 th:text="${profit}"></h2>
+
+  <a href="/admin/dashboard">Back to Dashboard</a>
+  <a href="/home/welcome">Go Home</a>
+</div>
+</body>
+</html>
