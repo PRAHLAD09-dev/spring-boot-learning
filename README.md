@@ -26,6 +26,38 @@ Covered:
 
 Status: Completed (Day 2)
 
+## Spring Boot MVC — Day 1
+
+Today I implemented a basic Spring Boot MVC project using Thymeleaf.
+
+### What I built
+- Multi-controller MVC structure
+- Class-level and method-level request mapping
+- Home, Profile, Dashboard and Profit pages
+- Navigation between pages
+- Data passing using Model
+- Thymeleaf view rendering
+
+### Controllers
+- HomeController
+- UserController
+- AdminController
+
+### Pages
+- home.html
+- profile.html
+- dashboard.html
+- profit.html
+
+### Concepts Practiced
+- @Controller
+- @RequestMapping
+- @GetMapping
+- MVC flow (Controller → View)
+- Thymeleaf integration
+
+Status: MVC Day-1 Completed
+
 ## Modules Planned
 - MVC architecture
 - RESTful APIs
