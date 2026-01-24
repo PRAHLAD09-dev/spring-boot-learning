@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Success</title>
+<style>
+body { font-family: Arial; 
+       text-align:center; 
+       padding-top:50px; 
+       background:#f9f9f9; 
+      }
+.card { background:white; 
+        padding:20px; 
+        width:350px; 
+        margin:auto; 
+        border-radius:10px; 
+        box-shadow:0 0 10px rgba(0,0,0,.1);
+      }
+h2 { color:green; }
+a { display:block; 
+    margin-top:15px; 
+    color:#007bff; 
+    text-decoration:none; 
+    font-weight:bold; 
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2 th:text="${message}"></h2>
+    <p>Name: <b th:text="${user.name}"></b></p>
+    <p>Email: <b th:text="${user.email}"></b></p>
+
+    <a href="/user/register">Register Another User</a>
+</div>
+
+</body>
+</html>
