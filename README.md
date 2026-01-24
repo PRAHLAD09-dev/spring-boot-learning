@@ -58,6 +58,46 @@ Today I implemented a basic Spring Boot MVC project using Thymeleaf.
 
 Status: MVC Day-1 Completed
 
+### DAY 2 — Spring Boot MVC (Forms & POST Mapping)
+
+## Spring Boot MVC — Day 2
+
+Today I implemented Spring Boot MVC form handling using Controller, Service Layer, and Model with Thymeleaf integration.
+
+### What I built
+- User registration form (Name + Email)
+- POST request handling using @PostMapping
+- Service layer for business logic processing
+- Model class for form data (User entity)
+- Form data binding using @ModelAttribute
+- Dynamic success page rendering
+- Navigation between register and success pages
+- Thymeleaf form and data rendering
+
+### Controllers
+- UserController
+
+### Service Layer
+- UserService
+
+### Model
+- User (Name, Email)
+
+### Pages
+- register.html
+- success.html
+
+### Concepts Practiced
+- @PostMapping
+- @ModelAttribute
+- Service layer architecture
+- Model class usage (DTO / Entity)
+- Form submission in Spring MVC
+- MVC flow (Controller → Service → View)
+- Thymeleaf form handling
+
+Status: MVC Day-2 Completed
+
 ## Modules Planned
 - MVC architecture
 - RESTful APIs
