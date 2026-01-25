@@ -98,6 +98,40 @@ Today I implemented Spring Boot MVC form handling using Controller, Service Laye
 
 Status: MVC Day-2 Completed
 
+## Spring Boot MVC — Day 3
+
+Today I implemented advanced Spring Boot MVC concepts including routing, validation, and model binding.
+
+### What I built
+- Path Parameter example (/user/profile/{name})
+- Query Parameter example (/user/search?keyword=...)
+- User registration form with validation
+- Form binding using @ModelAttribute
+- Server-side validation using Jakarta Validation
+- Success page after valid form submission
+
+### Controllers
+- UserController
+
+### Model
+- User (name, email) with validation annotations
+
+### Pages
+- register.html
+- success.html
+- profile.html
+- search.html
+
+### Concepts Practiced
+- @PathVariable
+- @RequestParam
+- @ModelAttribute
+- Form validation (@Valid)
+- BindingResult error handling
+- Spring MVC routing flow (Controller → View)
+
+Status: MVC Day-3 Completed
+
 ## Modules Planned
 - MVC architecture
 - RESTful APIs
