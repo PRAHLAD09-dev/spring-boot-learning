@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Profile</title>
+    <style>
+        body { font-family: Arial; background: #f5f6fa; text-align: center; }
+        .card { background: white; padding: 25px; width: 350px; margin: 80px auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; }
+        a { display: block; margin-top: 12px; color: #3498db; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>User Profile</h2>
+    <p>Name: <b th:text="${name}">User</b></p>
+
+    <a href="/user/register">Register User</a>
+    <a href="/user/search?keyword=test">Search Example</a>
+</div>
+
+</body>
+</html>

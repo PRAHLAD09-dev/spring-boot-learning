@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Success</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #ecf9f1; }
+        .card { background: white; padding: 30px; width: 360px; margin: 90px auto; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #2ecc71; }
+        a { display: block; margin-top: 10px; color: #3498db; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>User Registered Successfully!</h2>
+
+    <p>Name: <b th:text="${user.name}"></b></p>
+    <p>Email: <b th:text="${user.email}"></b></p>
+
+    <a href="/user/register">Register Another User</a>
+    <a href="/user/profile/Prahlad">Go to Profile</a>
+</div>
+
+</body>
+</html>

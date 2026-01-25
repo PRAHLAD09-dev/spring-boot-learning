@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Result</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #eef2f7; }
+        .box { margin-top: 80px; background: white; padding: 25px; width: 350px; border-radius: 10px; margin-left: auto; margin-right: auto; }
+        h2 { color: #27ae60; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Search Result</h2>
+    <p>Keyword: <b th:text="${keyword}"></b></p>
+
+    <a href="/user/register">Go to Register</a>
+</div>
+
+</body>
+</html>
