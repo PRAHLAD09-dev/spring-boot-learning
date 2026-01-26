@@ -132,6 +132,37 @@ Today I implemented advanced Spring Boot MVC concepts including routing, validat
 
 Status: MVC Day-3 Completed
 
+## Spring Boot MVC — Day 4 (CRUD Module)
+
+In Day 4, I implemented a full CRUD (Create, Read, Update, Delete) system using Spring Boot MVC and Thymeleaf.
+
+### Features Implemented
+- User Registration (Create)
+- List All Users (Read)
+- Edit User Details (Update)
+- Delete User (Delete)
+- In-memory data storage (No database yet)
+- MVC architecture with Controller and Model
+- Thymeleaf page rendering
+
+### Pages Created
+- register.html — Add user form
+- list.html — Display all users
+- edit.html — Update user details
+
+### Key Concepts Practiced
+- Spring MVC Controllers
+- @GetMapping and @PostMapping
+- PathVariable usage
+- Model attribute binding
+- Thymeleaf templating
+- CRUD workflow in MVC
+
+### Purpose
+This module strengthens MVC fundamentals before moving to REST APIs and JPA (Database integration).
+
+Status: MVC CRUD Completed
+
 ## Modules Planned
 - MVC architecture
 - RESTful APIs
