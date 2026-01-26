@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit User</title>
+    <style>
+        body { font-family: Arial; background: #f4f6f8; padding: 40px; }
+        .card { width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+        input, button { width: 100%; padding: 10px; margin-top: 10px; }
+        button { background: green; color: white; border: none; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Edit User</h2>
+
+    <form th:action="@{/user/update}" method="post" th:object="${user}">
+        <input type="hidden" th:field="*{id}">
+        <input type="text" th:field="*{name}" required>
+        <input type="email" th:field="*{email}" required>
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+</body>
+</html>
