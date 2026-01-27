@@ -163,6 +163,41 @@ This module strengthens MVC fundamentals before moving to REST APIs and JPA (Dat
 
 Status: MVC CRUD Completed
 
+## Spring Boot MVC — Day 5 (Mini Project)
+
+Built a complete Spring Boot MVC Mini Project implementing a User Management System.
+
+### Features Implemented
+- User Registration (Create)
+- View All Users (Read)
+- Edit User Details (Update)
+- Delete User (Delete)
+- Search Users (Filter)
+- Validation using Spring Boot
+- Service Layer for business logic
+- Clean MVC architecture (Controller → Service → Model)
+- In-memory storage (No database yet)
+
+### Pages Included
+- home.html — Entry page
+- register.html — Add user form
+- list.html — Display all users
+- edit.html — Update user details
+
+### Key Concepts Practiced
+- Spring MVC Routing
+- @Controller, @GetMapping, @PostMapping
+- Model data binding
+- Validation (Jakarta Validation)
+- Thymeleaf templating
+- CRUD workflow
+- Clean layered backend architecture
+
+### Purpose
+This mini project consolidates MVC concepts before moving to REST APIs and Database (JPA).
+
+Status: MVC Mini Project Completed
+
 ## Modules Planned
 - MVC architecture
 - RESTful APIs
