@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Edit User</title>
+<style>
+body {
+  font-family: Arial;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+.card {
+  background: white;
+  padding: 28px;
+  width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+h3 {
+  text-align: center;
+  color: green;
+}
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  background: green;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+button:hover {
+  background: #1e7e34;
+}
+a {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h3>Edit User</h3>
+
+  <form action="/user/update" method="post">
+    <input type="hidden" name="id" th:value="${user.id}">
+    <input type="text" name="name" th:value="${user.name}" required>
+    <input type="email" name="email" th:value="${user.email}" required>
+
+    <button type="submit">Update User</button>
+  </form>
+
+  <a href="/user/list">Back to List</a>
+</div>
+
+</body>
+</html>
