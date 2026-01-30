@@ -158,9 +158,6 @@ In Day 4, I implemented a full CRUD (Create, Read, Update, Delete) system using 
 - Thymeleaf templating
 - CRUD workflow in MVC
 
-### Purpose
-This module strengthens MVC fundamentals before moving to REST APIs and JPA (Database integration).
-
 Status: MVC CRUD Completed
 
 ## Spring Boot MVC — Day 5 (Mini Project)
@@ -193,13 +190,42 @@ Built a complete Spring Boot MVC Mini Project implementing a User Management Sys
 - CRUD workflow
 - Clean layered backend architecture
 
-### Purpose
-This mini project consolidates MVC concepts before moving to REST APIs and Database (JPA).
-
 Status: MVC Mini Project Completed
 
+## Spring Boot REST — Day 1
+
+Today I implemented basic Spring Boot REST concepts including REST controllers and JSON responses.
+
+### What I built
+- Simple REST API using Spring Boot
+- GET endpoint returning plain text
+- Java Object → JSON API response
+- Custom JSON response using Map
+- Live time API response
+
+### Controllers
+- HelloController
+
+### Model
+- User (id, name, email)
+
+### APIs Created
+- GET /api/hello → Simple text response  
+- GET /api/user → Java object as JSON  
+- GET /api/time → Custom JSON with live server time  
+
+### Concepts Practiced
+- @RestController  
+- @RequestMapping  
+- @GetMapping  
+- Java → JSON conversion  
+- Returning custom JSON response  
+- REST API fundamentals  
+
+### Status
+REST Day-1 Completed
+
 ## Modules Planned
-- MVC architecture
 - RESTful APIs
 - Spring Data JPA
 - Spring Security
