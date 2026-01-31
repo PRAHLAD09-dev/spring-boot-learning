@@ -225,6 +225,31 @@ Today I implemented basic Spring Boot REST concepts including REST controllers a
 ### Status
 REST Day-1 Completed
 
+## Spring Boot REST — Day 2
+
+Today I focused on handling input in REST APIs using Spring Boot.
+
+### What I built
+- POST API to accept JSON input
+- Path Variable handling
+- Query Parameter handling
+- JSON input → Java object conversion
+
+### APIs Created
+- POST /api/user
+- GET /api/user/{name}
+- GET /api/search?keyword=
+
+### Concepts Practiced
+- @PostMapping  
+- @RequestBody  
+- @PathVariable  
+- @RequestParam  
+- JSON input handling  
+
+### Status
+REST Day-2 Completed
+
 ## Modules Planned
 - RESTful APIs
 - Spring Data JPA
