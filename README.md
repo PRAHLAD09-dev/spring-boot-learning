@@ -291,6 +291,44 @@ Today I implemented REST CRUD APIs using Spring Boot.
 - Postman
 
 Status: REST Day 3 Completed
+## Spring Boot REST — Day 4
+
+Today I focused on Java ↔ JSON handling and clean API response design in Spring Boot.
+
+### What I built
+- Custom API response structure
+- Wrapper-based JSON responses
+- Clean and consistent API output
+- Improved readability of REST responses
+
+### APIs Enhanced
+- GET    /api/users
+- GET    /api/users/{id}
+- POST   /api/users
+
+### Response Structure
+- status
+- message
+- data
+
+### Layers Used
+- Controller
+- Service
+- Model
+- DTO (Response Wrapper)
+
+### Concepts Practiced
+- Java → JSON conversion
+- JSON → Java conversion
+- Wrapper response pattern
+- Nested JSON structure
+- In-memory data flow (POST → GET)
+
+### Tools
+- Spring Boot
+- Postman
+
+Status: REST Day 4 Completed
 
 ## Modules Planned
 - RESTful APIs
