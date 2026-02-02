@@ -250,6 +250,48 @@ Today I focused on handling input in REST APIs using Spring Boot.
 ### Status
 REST Day-2 Completed
 
+## Spring Boot REST — Day 3
+
+Today I implemented REST CRUD APIs using Spring Boot.
+
+### What I built
+- REST controller with CRUD endpoints
+- Service layer for business logic
+- In-memory data handling (no database)
+- JSON request & response handling
+- API testing using Postman
+
+### APIs Implemented
+- POST   /api/users        → Create user
+- GET    /api/users        → Get all users
+- GET    /api/users/{id}   → Get user by id
+- PUT    /api/users/{id}   → Update user
+- DELETE /api/users/{id}   → Delete user
+
+### Layers Used
+- Controller
+- Service
+- Model
+
+### Concepts Practiced
+- @RestController
+- @RequestMapping
+- @GetMapping
+- @PostMapping
+- @PutMapping
+- @DeleteMapping
+- @RequestBody
+- @PathVariable
+- JSON ↔ Java Object mapping
+- RESTful API design
+- Controller → Service flow
+
+### Tools
+- Spring Boot
+- Postman
+
+Status: REST Day 3 Completed
+
 ## Modules Planned
 - RESTful APIs
 - Spring Data JPA
