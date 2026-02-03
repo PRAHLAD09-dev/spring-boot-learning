@@ -330,6 +330,44 @@ Today I focused on Java ↔ JSON handling and clean API response design in Sprin
 
 Status: REST Day 4 Completed
 
+## Spring Boot REST — Day 5
+
+Today I implemented validation in REST APIs using Spring Boot.
+
+### What I built
+- Input validation using Bean Validation
+- Validation rules on request body
+- Automatic 400 Bad Request on invalid input
+- Tested validation errors using Postman
+
+### Validation Rules
+- id must not be null
+- name must not be blank
+- email must be valid email format
+
+### Concepts Practiced
+- @Valid
+- @NotNull
+- @NotBlank
+- @Email
+- Request body validation
+- REST validation flow
+
+### APIs Validated
+- POST  /api/users
+- GET  /api/users
+### Layers Used
+- Controller
+- Service
+- Model
+- DTO (Response Wrapper)
+
+### Tools
+- Spring Boot
+- Postman
+
+Status: REST Day 5 Completed
+
 ## Modules Planned
 - RESTful APIs
 - Spring Data JPA
