@@ -368,6 +368,46 @@ Today I implemented validation in REST APIs using Spring Boot.
 
 Status: REST Day 5 Completed
 
+## Spring Boot REST — Day 6
+
+Today I implemented DTO-based response handling and global exception handling
+in REST APIs using Spring Boot.
+
+### What I built
+- Request DTO and Response DTO
+- Clean and consistent API response structure
+- Custom exception for business logic errors
+- Global exception handling using ControllerAdvice
+- Proper HTTP status codes for errors
+- Centralized error response handling
+
+### Exception Handling
+- User not found exception (404)
+- Validation error handling (400)
+- Clean JSON error response format
+
+### Concepts Practiced
+- Request DTO vs Response DTO
+- Custom RuntimeException
+- @RestControllerAdvice
+- @ExceptionHandler
+- Service layer exception throwing
+- Controller → Service → Exception flow
+- REST error handling best practices
+
+### Layers Used
+- Controller
+- Service
+- DTO
+- Model
+- Exception
+
+### Tools
+- Spring Boot
+- Postman
+
+Status: REST Day 6 Completed
+
 ## Modules Planned
 - RESTful APIs
 - Spring Data JPA
