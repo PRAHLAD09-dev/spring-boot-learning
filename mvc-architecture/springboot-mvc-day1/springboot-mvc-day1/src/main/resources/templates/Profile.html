@@ -17,8 +17,8 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1 {
-        color: #28a745;
+     h1 {
+        color: rgb(255, 128, 64);
     }
     a {
         display: block;
@@ -34,8 +34,8 @@
 </head>
 <body>
 <div class="card">
-    <h2>User Profile</h2>
-    <p>Name: <b th:text="${name}">User</b></p>
+    <h1>User Profile</h1>
+    <p>Name: <b th:text="${name}" style="color: red; font-weight: bold;"></b></p>
 
     <a href="/home/welcome">Back to Home</a>
     <a href="/admin/dashboard">Go to Dashboard</a>

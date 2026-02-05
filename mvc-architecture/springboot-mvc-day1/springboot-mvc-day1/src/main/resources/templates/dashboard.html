@@ -14,8 +14,12 @@
             padding: 40px;
             border-radius: 10px;
             display: inline-block;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);     }
+            
+            
+    h1 {
+        color: rgb(255, 128, 64);
+    }
         a {
             display: block;
             margin-top: 15px;
@@ -29,7 +33,7 @@
 
 <div class="container">
     <h1>Admin Dashboard</h1>
-    <p th:text="${msg}">Welcome to Dashboard</p>
+    <p th:text= "${role}" style="color: red; font-weight: bold;"></p>
 
     <a href="/home/welcome">Home Page</a>
     <a href="/admin/profit">View Profit</a>
