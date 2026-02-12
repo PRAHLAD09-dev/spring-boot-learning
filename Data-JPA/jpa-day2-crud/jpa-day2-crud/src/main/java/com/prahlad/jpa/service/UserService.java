@@ -36,6 +36,23 @@ public class UserService
                 saved.getEmail()
         );
     }
+    
+    // UPDATE USER
+    public User updateUser(Long id, UserResponseDto dto) 
+    {
+
+        User existing = repo.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        User updated = new User(
+                existing.getId(),
+                dto.getName(),
+                dto.getEmail()
+        );
+
+        return repo.save(updated);
+    
+}
 
     // GET BY ID
     public UserResponseDto getById(Long id) 
