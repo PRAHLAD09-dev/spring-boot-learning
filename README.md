@@ -1,38 +1,18 @@
 # Spring Boot Backend Learning
 
 This repository represents my structured backend development learning journey
-using Spring Boot. It is designed to follow real-world backend architecture
-and industry best practices, focusing on clean layering, maintainability,
-and scalable design.
+using Spring Boot.  
+It follows real-world backend architecture and industry best practices
+with a strong focus on clean layering, maintainability, and scalability.
 
-The project evolves module by module, starting from Spring fundamentals
-and progressing towards secure, production-ready backend systems.
-
----
-
-## Tech Stack
-
-### Core Backend
-- Java 21
-- Spring Boot 4.0.2
-- Spring MVC
-- Spring REST APIs
-
-### API & Development Tools
-- Swagger UI / OpenAPI (API documentation)
-- Postman (API testing)
-- Maven (build & dependency management)
-- Git & GitHub (version control)
-
-### View & Persistence
-- Thymeleaf (MVC views)
-- MySQL (introduced with Spring Data JPA module)
+The repository is organized module-wise and day-wise, exactly how backend
+development is learned in real projects.
 
 ---
 
 ## Architecture Overview
 
-The project follows a clean layered backend architecture:
+Clean layered architecture followed across all modules:
 
 Controller  
 → Service  
@@ -40,80 +20,193 @@ Controller
 → Database  
 
 Supporting layers:
-- DTO — API request and response contracts
-- Model — Domain objects and entities
-- Exception — Centralized error handling
-- Config — Application-level configuration
+- DTO (request / response)
+- Entity (JPA mapping)
+- Exception (global handling)
+- Config (application & security config)
 
 ---
 
 ## Modules Covered
 
-- Spring Boot Fundamentals
-- Spring MVC (with mini project)
-- Spring REST APIs
-  - CRUD APIs
-  - Validation
-  - Exception Handling
-  - Swagger / OpenAPI Documentation
-- Spring Data JPA (planned)
-- Spring Security (planned)
+### Spring Boot Basics
+- Dependency Injection
+- Constructor Injection
+- Bean lifecycle
+- Configuration & profiles
+
+###  Spring MVC
+- Controller & View flow
+- Thymeleaf integration
+- Form handling
+- Path params & query params
+- MVC mini project (CRUD)
+
+### Spring REST APIs
+- RESTful CRUD APIs
+- JSON request/response
+- DTO based APIs
+- Validation
+- Global exception handling
+- Pagination & sorting
+- Swagger API documentation
+- REST mini project (Tourist Management System)
+
+### Spring Data JPA
+- Entity mapping
+- One-to-Many & Many-to-One relationships
+- JpaRepository
+- Custom finder methods
+- JPQL queries
+- Pagination & File Upload
+- MySQL integration
+- Complete Food Order Management System (User + Admin modules)
+
+### Spring Security (In Progress)
+- Authentication & Authorization
+- SecurityFilterChain
+- HTTP Basic Authentication
+- Securing REST APIs
+- Role based access (next)
 
 ---
 
 ## Project Structure
 
-src/main/java
-└── com.prahlad
-    ├── controller
-    ├── service
-    ├── repository
-    ├── model
-    ├── dto
-    ├── exception
-    └── config
+spring-boot-learning/
+│
+├── springboot-basic/
+│   ├── springboot-basic-day1
+│   └── springboot-basic-day2
+│
+├── mvc-architecture/
+│   ├── springboot-mvc-day1
+│   ├── springboot-mvc-day2
+│   ├── springboot-mvc-day3
+│   ├── springboot-mvc-crud-day4
+│   └── mvc-mini-project
+│
+├── RESTful-APIs/
+│   ├── rest-day1-basics
+│   ├── rest-day2-input
+│   ├── rest-day3-crud
+│   ├── rest-day4-json
+│   ├── rest-day5-validation
+│   ├── rest-day6-exception-handling
+│   ├── rest-day7-integration
+│   ├── rest-day8-swagger
+│   ├── rest-day9-pagination-search-upload
+│   └── Tourist-Management-System
+│
+├── Data-JPA/
+│   ├── jpa-day1-basics
+│   ├── jpa-day2-crud
+│   ├── jpa-day3-pagination-sorting
+│   ├── jpa-day4-relationships
+│   ├── jpa-day5-custom-queries
+│   └── Food-Order-Management-System
+│
+├── Spring-Security/
+│   └── spring-security-day1-basic-auth
+│
+└── docs/
+
+---
 
 ---
 
 ## Documentation
 
-To keep the main README concise and professional, detailed learning notes,
-daily progress, and implementation explanations are maintained separately.
+Detailed learning notes and explanations are maintained separately
+inside the docs/ folder to keep the main README clean.
 
-All module-wise and day-wise documentation can be found under:
+Each document contains:
+- Concepts learned
+- Why it is used
+- How it is implemented
+- Project references
 
 docs/
-├── spring-boot-basics/
-├── spring-mvc/
-└── spring-rest/
-
-Each folder contains focused notes and implementations corresponding
-to that specific module.
+│
+├── springboot-basic/
+│   ├── springboot-basic-day1.md
+│   └── springboot-basic-day2.md
+│
+├── mvc-architecture/
+│   ├── springboot-mvc-day1.md
+│   ├── springboot-mvc-day2.md
+│   ├── springboot-mvc-day3.md
+│   ├── springboot-mvc-crud-day4.md
+│   └── mvc-mini-project.md
+│
+├── RESTful-APIs/
+│   ├── rest-day1-basics.md
+│   ├── rest-day2-input.md
+│   ├── rest-day3-crud.md
+│   ├── rest-day4-json.md
+│   ├── rest-day5-validation.md
+│   ├── rest-day6-exception-handling.md
+│   ├── rest-day7-integration.md
+│   ├── rest-day8-swagger.md
+│   ├── rest-day9-pagination-search-upload.md
+│   └── Tourist-Management-System.md
+│
+├── Data-JPA/
+│   ├── jpa-day1-basics.md
+│   ├── jpa-day2-crud.md
+│   ├── jpa-day3-pagination-sorting.md
+│   ├── jpa-day4-relationships.md
+│   ├── jpa-day5-custom-queries.md
+│   └── Food-Order-Management-System.md
+│
+└── Spring-Security/
+    └── spring-security-day1-basic-auth.md
 
 ---
 
 ## Learning Status
 
-- Spring Boot Fundamentals — Completed
-- Spring MVC (with Mini Project) — Completed
-- Spring REST APIs — In Progress
-- Spring Data JPA — Planned
-- Spring Security — Planned
-- Final Backend Mini Project — Planned
+- Spring Boot Basics — Completed  
+- Spring MVC — Completed  
+- Spring REST APIs — Completed  
+- Spring Data JPA — Completed  
+- Spring Security — In Progress  
+
+---
+
+## Tech Stack
+
+### Core
+- Java 21
+- Spring Boot 4.0.2
+- Maven
+
+### Backend Frameworks
+- Spring MVC
+- Spring REST APIs
+- Spring Data JPA
+- Spring Security (in progress)
+
+### Tools
+- MySQL
+- Hibernate
+- Swagger / OpenAPI
+- Postman
+- Git & GitHub
+
 
 ---
 
 ## Purpose
-
 - Build strong backend fundamentals
-- Learn Spring Boot with industry-standard practices
+- Learn Spring Boot the right industry way
 - Maintain a clean, professional GitHub portfolio
-- Prepare for backend internships and placements
+- Prepare for backend internships & placements
 
 ---
 
 ## Note
 
-This repository focuses on backend development.
-Frontend frameworks and database integrations are introduced incrementally
-as part of later modules and projects.
+This repository is backend-focused.  
+Frontend, JWT, OAuth2, and production security setups are added gradually
+as part of advanced modules.
