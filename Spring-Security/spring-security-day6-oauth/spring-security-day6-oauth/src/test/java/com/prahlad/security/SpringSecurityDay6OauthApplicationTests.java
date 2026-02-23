@@ -1,0 +1,13 @@
+package com.prahlad.security;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringSecurityDay6OauthApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
