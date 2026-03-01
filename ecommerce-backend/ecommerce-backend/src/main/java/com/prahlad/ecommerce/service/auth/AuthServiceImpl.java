@@ -14,6 +14,7 @@ import com.prahlad.ecommerce.entity.User;
 import com.prahlad.ecommerce.enums.Role;
 import com.prahlad.ecommerce.repository.MerchantRepository;
 import com.prahlad.ecommerce.repository.UserRepository;
+import com.prahlad.ecommerce.security.JwtUtil;
 
 import lombok.RequiredArgsConstructor;
 
@@ -27,6 +28,7 @@ public class AuthServiceImpl implements AuthService
     private final UserRepository userRepository;
     private final MerchantRepository merchantRepository;
     private final PasswordEncoder passwordEncoder;
+    private final JwtUtil jwtUtil;
 
     @Override
     public  AuthResponse registerUser(UserRegisterRequest request)
@@ -50,7 +52,8 @@ public class AuthServiceImpl implements AuthService
         return new AuthResponse(
                 "User registered successfully",
                 user.getEmail(),
-                user.getRole().name()
+                user.getRole().name(),
+                null
         );
     }
 
@@ -75,46 +78,62 @@ public class AuthServiceImpl implements AuthService
         return new AuthResponse(
                 "Merchant registered successfully",
                 merchant.getEmail(),
-                "MERCHANT"
+                "MERCHANT",
+                null
         );
     }
 
+ 
     @Override
-    public AuthResponse login(LoginRequest request)
+    public AuthResponse login(LoginRequest request) 
     {
 
+      
         Optional<User> userOptional = userRepository.findByEmail(request.email());
 
         if (userOptional.isPresent()) {
             User user = userOptional.get();
 
-            if (!passwordEncoder.matches(request.password(), user.getPassword()))
+            if (!passwordEncoder.matches(request.password(), user.getPassword())) 
             {
                 throw new RuntimeException("Invalid credentials");
             }
+
+            String token = jwtUtil.generateToken(user);
 
             return new AuthResponse(
                     "Login successful",
                     user.getEmail(),
-                    user.getRole().name()
+                    user.getRole().name(),
+                    token
             );
         }
+
+
         Optional<Merchant> merchantOptional =
                 merchantRepository.findByEmail(request.email());
 
-        if (merchantOptional.isPresent())
-        {
+        if (merchantOptional.isPresent()) {
             Merchant merchant = merchantOptional.get();
 
-            if (!passwordEncoder.matches(request.password(), merchant.getPassword()))
+            if (!passwordEncoder.matches(request.password(), merchant.getPassword())) 
             {
                 throw new RuntimeException("Invalid credentials");
             }
 
+            User tempUser = User.builder()
+                    .id(merchant.getId())
+                    .email(merchant.getEmail())
+                    .role(Role.MERCHANT)
+                    .build();
+
+            String token = jwtUtil.generateToken(tempUser);
+
             return new AuthResponse(
                     "Login successful",
                     merchant.getEmail(),
-                    "MERCHANT"
+                    "MERCHANT",
+                    token
             );
         }
 
