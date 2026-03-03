@@ -12,7 +12,6 @@ import com.prahlad.ecommerce.dto.auth.MerchantRegisterRequest;
 import com.prahlad.ecommerce.dto.auth.UserRegisterRequest;
 import com.prahlad.ecommerce.service.auth.AuthService;
 
-
 import lombok.RequiredArgsConstructor;
 
 @RestController

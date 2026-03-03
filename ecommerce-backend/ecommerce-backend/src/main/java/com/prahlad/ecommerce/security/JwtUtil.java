@@ -4,6 +4,8 @@ import java.security.Key;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import com.prahlad.ecommerce.entity.User;
@@ -28,13 +30,18 @@ public class JwtUtil
         return Keys.hmacShaKeyFor(secret.getBytes());
     }
 
-    public String generateToken(User user) 
+    public String generateToken(UserDetails userDetails) 
     {
 
+        String role = userDetails.getAuthorities()
+                .stream()
+                .findFirst()
+                .map(GrantedAuthority::getAuthority)
+                .orElse("");
+
         return Jwts.builder()
-                .setSubject(user.getEmail())
-                .claim("role", user.getRole().name())
-                .claim("userId", user.getId())
+                .setSubject(userDetails.getUsername())
+                .claim("role", role)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + expiration))
                 .signWith(getSignKey(), SignatureAlgorithm.HS256)

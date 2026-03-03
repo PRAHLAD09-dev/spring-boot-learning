@@ -10,4 +10,5 @@ import com.prahlad.ecommerce.entity.Product;
 public interface ProductRepository extends JpaRepository<Product, Long> 
 {
     List<Product> findByCategoryId(Long categoryId);
+    List<Product> findByMerchantId(Long merchantId);
 }

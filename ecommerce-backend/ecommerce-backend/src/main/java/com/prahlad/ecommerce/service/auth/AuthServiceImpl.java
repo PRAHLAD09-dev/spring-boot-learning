@@ -2,8 +2,10 @@ package com.prahlad.ecommerce.service.auth;
 
 import java.util.Optional;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.prahlad.ecommerce.dto.auth.AuthResponse;
 import com.prahlad.ecommerce.dto.auth.LoginRequest;
@@ -70,6 +72,7 @@ public class AuthServiceImpl implements AuthService
                 .businessName(request.businessName())
                 .email(request.email())
                 .password(passwordEncoder.encode(request.password()))
+                .role(Role.MERCHANT)
                 .approved(false)
                 .build();
 
@@ -91,7 +94,8 @@ public class AuthServiceImpl implements AuthService
       
         Optional<User> userOptional = userRepository.findByEmail(request.email());
 
-        if (userOptional.isPresent()) {
+        if (userOptional.isPresent()) 
+        {
             User user = userOptional.get();
 
             if (!passwordEncoder.matches(request.password(), user.getPassword())) 
@@ -110,10 +114,10 @@ public class AuthServiceImpl implements AuthService
         }
 
 
-        Optional<Merchant> merchantOptional =
-                merchantRepository.findByEmail(request.email());
+        Optional<Merchant> merchantOptional = merchantRepository.findByEmail(request.email());
 
-        if (merchantOptional.isPresent()) {
+        if (merchantOptional.isPresent()) 
+        {
             Merchant merchant = merchantOptional.get();
 
             if (!passwordEncoder.matches(request.password(), merchant.getPassword())) 
@@ -121,18 +125,17 @@ public class AuthServiceImpl implements AuthService
                 throw new RuntimeException("Invalid credentials");
             }
 
-            User tempUser = User.builder()
-                    .id(merchant.getId())
-                    .email(merchant.getEmail())
-                    .role(Role.MERCHANT)
-                    .build();
+            if (!merchant.isApproved()) 
+            {
+            	throw new ResponseStatusException( HttpStatus.FORBIDDEN, "Merchant not approved yet");
+            }
 
-            String token = jwtUtil.generateToken(tempUser);
+            String token = jwtUtil.generateToken(merchant);
 
             return new AuthResponse(
                     "Login successful",
                     merchant.getEmail(),
-                    "MERCHANT",
+                   merchant.getRole().name(),
                     token
             );
         }
