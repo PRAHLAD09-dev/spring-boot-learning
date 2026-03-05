@@ -81,7 +81,7 @@ public class AuthServiceImpl implements AuthService
         return new AuthResponse(
                 "Merchant registered successfully",
                 merchant.getEmail(),
-                "MERCHANT",
+                merchant.getRole().name(),
                 null
         );
     }

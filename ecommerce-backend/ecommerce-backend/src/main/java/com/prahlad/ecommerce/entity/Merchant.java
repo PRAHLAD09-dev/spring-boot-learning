@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.prahlad.ecommerce.enums.Role;
 
 import jakarta.persistence.Column;
@@ -49,6 +50,7 @@ public class Merchant implements UserDetails
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "merchant")
     private List<Product> products;
     
