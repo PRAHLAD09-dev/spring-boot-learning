@@ -62,12 +62,15 @@ Supporting layers:
 - MySQL integration
 - Complete Food Order Management System (User + Admin modules)
 
-### Spring Security (In Progress)
+### Spring Security 
 - Authentication & Authorization
 - SecurityFilterChain
 - HTTP Basic Authentication
 - Securing REST APIs
-- Role based access (next)
+- Role based access 
+- JWT Authentication
+- JWT Authentication + Role Based Access
+- OAuth2 Login – Google & GitHub
 
 ---
 
@@ -107,7 +110,12 @@ spring-boot-learning/
 │   └── Food-Order-Management-System
 │
 ├── Spring-Security/
-│   └── spring-security-day1-basic-auth
+│   ├── spring-security-day1-basic-auth
+│   ├── spring-security-day2-inmemory-auth
+│   ├── spring-security-day3-db-auth
+│   ├── spring-security-day4-jwt
+│   ├── spring-security-day5-jwt-advanced
+│   └── spring-security-day6-oauth
 │
 └── docs/
 
@@ -159,8 +167,13 @@ docs/
 │   ├── jpa-day5-custom-queries.md
 │   └── Food-Order-Management-System.md
 │
-└── Spring-Security/
-    └── spring-security-day1-basic-auth.md
+├── Spring-Security/
+│   ├── spring-security-day1-basic-auth.md
+│   ├── spring-security-day2-inmemory-auth.md
+│   ├── spring-security-day3-db-auth.md
+│   ├── spring-security-day4-jwt.md
+│   ├── spring-security-day5-jwt-advanced.md
+│   └── spring-security-day6-oauth.md
 
 ---
 
@@ -210,3 +223,9 @@ docs/
 This repository is backend-focused.  
 Frontend, JWT, OAuth2, and production security setups are added gradually
 as part of advanced modules.
+
+## Repository Status
+
+This repository contains my structured Spring Boot backend learning journey covering core modules such as Spring MVC, REST APIs, Spring Data JPA, and Spring Security.
+The main goal of this repository is to build strong backend fundamentals and document the concepts learned during development.
+Major real-world backend projects built during this learning phase are maintained in separate repositories.
